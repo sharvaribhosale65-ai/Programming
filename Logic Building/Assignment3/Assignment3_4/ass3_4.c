@@ -1,0 +1,70 @@
+/*
+Algorithm:
+
+    START
+        Accept character as CValue
+        Convert the character into the case of that
+        Display the result
+    STOP
+*/
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// Include required header files
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// Function name    :   DisplayConvert
+// Input    :           char
+// Output   :           char
+// Description  :       Convert the character into the case of that character
+// Date :               26/05/2026 
+// Author   :           Sharvari Gorakhnath Bhosale
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+void DisplayConvert (
+                        char CValue                     //input
+                    )
+{
+
+    if(CValue >= 'a' && CValue <= 'z')
+    {
+        printf("%c",CValue - 32);
+    }
+    else if(CValue >= 'A' && CValue <= 'Z')
+    {
+        printf("%c",CValue + 32);
+    }
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application to convert the character into the case of that character of char  value
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char cValue = '\0';
+
+    printf("Enter character : ");
+    scanf("%c",&cValue);
+
+    DisplayConvert(cValue);
+
+    return 0;
+}
+///////////////////////////////////////////////////////////////////////////////////////
+//
+// Input :  a 
+// Output : A
+// Input :  R 
+// Output : r
+//
+///////////////////////////////////////////////////////////////////////////////////////
