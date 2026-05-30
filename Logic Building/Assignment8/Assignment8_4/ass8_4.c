@@ -1,0 +1,65 @@
+/*
+Algorithm:
+
+    START
+        Accept temperature as fTemp
+        Convert temperature into celcius
+        Display the result
+    STOP
+*/
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Include required header files
+//
+/////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Function name    :   FhtoCs
+// Input    :           float
+// Output   :           float
+// Description  :       Convert temperature into celcius
+// Date :               30/05/2026 
+// Author   :           Sharvari Gorakhnath Bhosale
+//
+/////////////////////////////////////////////////////////////////////////////
+
+double FhtoCs(float fTemp)
+{
+    float iCels = 0.0f;
+
+    iCels = ((fTemp-32)*(5.0/9.0));
+    
+    return iCels;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Application to convert temperature into celcius of float value
+//
+//////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    float fValue = 0.0f;
+    float iRet = 0.0f;
+
+    printf("Enter temperature in Fahrenheit : ");
+    scanf("%f",&fValue);
+
+    iRet = FhtoCs(fValue);
+
+    printf("Temperature in celsius is : %f", iRet);
+
+    return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Input    :   10
+// Output   :   -12.222222
+//
+//////////////////////////////////////////////////////////////////////////////

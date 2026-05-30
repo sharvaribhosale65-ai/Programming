@@ -1,0 +1,74 @@
+/*
+Algorithm:
+
+    START
+        Accept number as iNo
+        Perform to display table in reverse
+        Display the result
+    STOP
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Include required header files
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Function name    :   Number
+// Input    :           int
+// Output   :           int
+// Description  :       Perform to display table in reverse 
+// Date :               24/05/2026 
+// Author   :           Sharvari Gorakhnath Bhosale
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+void RevTable(int iNo)
+{
+    int iCnt = 0;
+
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    for(iCnt = 10; iCnt >= 1; iCnt--)
+    {
+        printf("%d\t",iCnt * iNo);
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application to Perform to display table in reverse of int value
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter number : ");
+    scanf("%d",&iValue);
+
+    RevTable(iValue);
+
+    return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// Input    :   2
+// Output   :   20      18      16      14      12      10      8       6       4       2
+// Input    :   -5
+// Output   :   50      45      40      35      30      25      20      15      10      5
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//Time complexity : O(N)
+//Where N >= 0
