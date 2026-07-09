@@ -83,6 +83,8 @@ void InsertLast(PPNODE first, int iNo)
 // Input         : PNODE
 // Output        : void
 // Description   : Display all odd elements from the linked list.
+// Author        : Sharvari Bhosale
+// Date          : 09.07.2026
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
