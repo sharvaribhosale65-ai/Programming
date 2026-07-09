@@ -34,7 +34,7 @@ typedef struct node ** PPNODE;
 // Output        : void
 // Description   : Display all elements of the linked list.
 // Author        : Sharvari Bhosale
-// Date          :
+// Date          : 09.07.2026
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -55,7 +55,7 @@ void Display(PNODE first)
 // Output        : void
 // Description   : Insert a new node at the end of the linked list.
 // Author        : Sharvari Bhosale
-// Date          :
+// Date          : 09.07.2026
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -92,7 +92,7 @@ void InsertLast(PPNODE first, int iNo)
 // Output        : bool
 // Description   : Search the given element in the linked list.
 // Author        : Sharvari Bhosale
-// Date          :
+// Date          : 09.07.2026
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
