@@ -84,6 +84,8 @@ void InsertLast(PPNODE first, int iNo)
 // Input         : PNODE, int
 // Output        : int
 // Description   : Return the position of the first occurrence of the given element.
+// Author        : Sharvari Bhosale
+// Date          : 09.07.2026
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
