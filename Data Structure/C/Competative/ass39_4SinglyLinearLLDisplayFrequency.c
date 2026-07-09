@@ -82,6 +82,8 @@ void InsertLast(PPNODE first, int iNo)
 // Input         : PNODE, int
 // Output        : int
 // Description   : Count the frequency of the given element in the linked list.
+// Author        : Sharvari Bhosale
+// Date          : 09.07.2026
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
