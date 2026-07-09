@@ -84,6 +84,8 @@ void InsertLast(PPNODE first, int iNo)
 // Input         : PNODE
 // Output        : int
 // Description   : Count the total number of odd nodes in the linked list.
+// Author        : Sharvari Bhosale
+// Date          : 09.07.2026
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
