@@ -1,37 +1,40 @@
-#check
 import pandas as pd
 
 Border = "-"*30
 
-##################################################
-# Step 1 : Load the data set
-##################################################
+########################################
+# Step 1 : Load the dataset
+########################################
 
 print(Border)
-print("Step 1 : Load the data set")
+print("Step 1 : Load the dataset")
 print(Border)
 
-Datapath = "iris.csv"       
+DataPath = "iris.csv"
 
-df = pd.read_csv(Datapath)      #df - data frame
+df = pd.read_csv(DataPath)
 
-print("Dataset loaded sucessfully")
-print("Initial entries from dataset are : ")
+print("Dataset loaded succefully")
+print("Initial entries from dataset are. : ")
 print(df.head())
 
-##################################################
-# Step 2 : Exploratory Data Analysis (EDA)
-##################################################
+########################################
+# Step 2 : Data Analysis (EDA)
+########################################
 
 print(Border)
-print("Step 2 : Exploratory Data Analysis")
+print("Step 2 : Data Analysis (EDA)")
 print(Border)
 
-print("Shape of dataset : ",df.shape)     #shape is property
-print("Column names : ",list(df.columns))
-print("Missing values per column : ")
-print(df.isnull().sum)                    #canonical function call
+print("Shape of dataset : ",df.shape)       
+
+print("Column names : ",list(df.columns))       #header of columns
+
+print("Mising values per column : ")
+print(df.isnull().sum())            #if any column of row is empty then it displays
+
 print("Class distribution (species count) : ")
-print(df["species"].value_counts())
+print(df["species"].value_counts())     #total count of all species 50 50 50
+
 print("Statistical report of dataset : ")
-print(df.describe())
+print(df.describe())        #generate whole report means csv (total count, mean, SD, max, min)

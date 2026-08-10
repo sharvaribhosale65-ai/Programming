@@ -1,3 +1,5 @@
+#procedure remaining
+
 import pandas as pd
 
 import matplotlib.pyplot as plt
@@ -6,6 +8,12 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 
 from sklearn.tree import DecisionTreeClassifier
+
+from sklearn.metrics import (
+    accuracy_score,
+    confusion_matrix,
+    classification_report
+)
 
 Border = "-"*30
 
@@ -123,6 +131,54 @@ print(Border)
 print("Step 6 : Build the model")
 print(Border)
 
-model = DecisionTreeClassifier(max_depth=5)   #deep 5  
+model = DecisionTreeClassifier(max_depth=5)
 
 print("Model gets created succesfully")
+
+########################################
+# Step 7 : Train the model
+########################################
+
+print(Border)
+print("Step 7 : Train the model")
+print(Border)
+
+model.fit(X_train,Y_train)
+
+print("Model trained succesfully")
+
+########################################
+# Step 8 : Test the model
+########################################
+
+print(Border)
+print("Step 8 : Test the model")
+print(Border)
+
+Y_pred = model.predict(X_test)
+
+print("Model testing done")
+
+print("Expected answers : ")
+print(Y_test)
+
+print("Predicted answers : ")
+print(Y_pred)
+
+########################################
+# Step 9 : Evaluate the mdoel performance
+########################################
+
+print(Border)
+print("Step 9 : Evaluate the mdoel performance")
+print(Border)
+
+accuracy = accuracy_score(Y_test, Y_pred)
+print("Accuracy of model is : ",accuracy*100)
+
+print("Confustion matrix")
+cm = confusion_matrix(Y_test, Y_pred)
+print(cm)
+
+print("Classification Report")
+print(classification_report(Y_test, Y_pred))
