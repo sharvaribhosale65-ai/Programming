@@ -1,0 +1,91 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Import required libraries
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function name   :   isRotation
+//  Description     :   Check whether one string is rotation of another string or not.
+//  Input           :   String, String
+//  Output          :   boolean
+//  Author          :   Sharvari Gorakhnath Bhosale
+//  Date            :   19.08.2026
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+class StringX
+{
+    public boolean isRotation(String str1, String str2)
+    {
+        int i = 0;
+
+        if(str1.length() != str2.length())
+        {
+            return false;
+        }
+
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+
+        String str = str1 + str1;
+
+        if(str.contains(str2))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function to check whether one string is rotation of another.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+class ass61_5StringRotation
+{
+    public static void main(String A[])
+    {
+        Scanner sObj = new Scanner(System.in);
+        StringX strObj = new StringX();
+
+        boolean bRet = false;
+
+        System.out.println("Enter first string : ");
+        String str1 = sObj.nextLine();
+
+        System.out.println("Enter second string : ");
+        String str2 = sObj.nextLine();
+
+        bRet = strObj.isRotation(str1, str2);
+
+        if(bRet == true)
+        {
+            System.out.println("String is rotation of another string");
+        }
+        else
+        {
+            System.out.println("String is not rotation of another string");
+        }
+
+        sObj.close();
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Input   :   abcd    cdab
+//  Output  :  String is rotation of another string
+//
+//  Input   :   abcd    acbd      
+//  Output  :  String is not rotation of another string
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////
