@@ -1,0 +1,61 @@
+//anagram
+//imp
+
+import java.util.*;
+
+class program762
+{
+    public static boolean checkAnagram(String str1, String str2)
+    {
+        int i = 0;
+
+        if(str1.length() != str2.length())      //filter
+        {
+            return false;
+        }
+
+        char Arr[] = str1.toCharArray();
+        char Brr[] = str2.toCharArray();
+
+        Arrays.sort(Arr);
+        Arrays.sort(Brr);
+
+        str1 = new String(Arr);
+        str2 = new String(Brr);
+
+        if(str1.equals(str2))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public static void main(String A[])
+    {
+        Scanner sObj = new Scanner(System.in);
+        boolean bret = false;
+        int i = 0;
+
+        System.out.println("Enter first string : ");
+        String str1 = sObj.nextLine();
+
+        System.out.println("Enter second string : ");
+        String str2 = sObj.nextLine();
+
+        bret = checkAnagram(str1, str2);
+
+        if(bret == true)
+        {
+            System.out.println("Strings are anagram");
+        }
+
+        else
+        {
+            System.out.println("Strings are not anagram");
+        }
+        sObj.close();
+    }
+}

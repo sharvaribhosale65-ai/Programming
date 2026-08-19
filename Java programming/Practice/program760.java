@@ -1,0 +1,80 @@
+//anagram
+//imp
+
+import java.util.*;
+
+class program760
+{
+    public static boolean checkAnagram(String str1, String str2)
+    {
+        int i = 0;
+
+        if(str1.length() != str2.length())      //filter
+        {
+            return false;
+        }
+
+        str1 = str1.trim();
+        str1 = str1.replaceAll("\\s+", " ");
+        str1 = str1.toLowerCase();
+        char Arr[] = str1.toCharArray();
+
+        str2 = str2.trim();
+        str2 = str2.replaceAll("\\s+", " ");
+        str2 = str2.toLowerCase();
+        char Brr[] = str2.toCharArray();
+
+        int Frequency[] = new int[26];
+
+        for(i = 0; i < Brr.length; i++)
+        {
+            if(Arr[i] >= 'a' && Arr[i] <= 'z')
+            {
+                Frequency[(int)Arr[i] - 97]++;
+            }
+
+            if(Brr[i] >= 'a' && Brr[i] <= 'z')
+            {
+                Frequency[(int)Brr[i] - 97]--;
+            }
+        }
+
+        boolean bFlag = true;
+
+        for(i = 0; i < Frequency.length; i++)
+        {
+            if(Frequency[i] != 0)
+            {
+                bFlag = false;
+                break;
+            }
+        }
+        return bFlag;
+    }
+
+    public static void main(String A[])
+    {
+        Scanner sObj = new Scanner(System.in);
+        boolean bret = false;
+        int i = 0;
+
+        System.out.println("Enter first string : ");
+        String str1 = sObj.nextLine();
+
+        System.out.println("Enter second string : ");
+        String str2 = sObj.nextLine();
+
+        bret = checkAnagram(str1, str2);
+
+        if(bret == true)
+        {
+            System.out.println("Strings are anagram");
+        }
+
+        else
+        {
+            System.out.println("Strings are not anagram");
+        }
+        sObj.close();
+    }
+}
