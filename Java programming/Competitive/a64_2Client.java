@@ -1,0 +1,46 @@
+import java.net.*;
+import java.io.*;
+
+class Client
+{
+    public static void main(String args[])
+    {
+        try
+        {
+            Socket sobj = new Socket("localhost", 2100);
+
+            BufferedReader brobj = new BufferedReader(
+                                    new InputStreamReader(System.in));
+
+            PrintWriter pwobj = new PrintWriter(
+                                    sobj.getOutputStream(), true);
+
+            BufferedReader brServer = new BufferedReader(
+                                    new InputStreamReader(
+                                    sobj.getInputStream()));
+
+            while(true)
+            {
+                System.out.print("Client : ");
+                String command = brobj.readLine();
+
+                pwobj.println(command);
+
+                String result = brServer.readLine();
+
+                System.out.println("Server : " + result);
+
+                if(command.equals("QUIT"))
+                {
+                    break;
+                }
+            }
+
+            sobj.close();
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}
